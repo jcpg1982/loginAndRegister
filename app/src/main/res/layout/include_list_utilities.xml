@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:orientation="horizontal"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <RelativeLayout
+        android:id="@android:id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/progress_circle"
+            style="?android:attr/indeterminateProgressStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress_circle"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:text="Cargando ...."
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            tools:ignore="UnusedAttribute" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Vacio"
+        android:textAllCaps="false"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/container_try_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_action_refresh"
+            android:tint="@color/overlay_dark"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Vuelve a intentarlo"
+            android:textAllCaps="false"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+</merge>

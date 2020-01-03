@@ -1,4 +1,4 @@
-package com.master.machines.loginbandregister;
+package com.master.machines.loginandregister;
 
 import org.junit.Test;
 
